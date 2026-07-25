@@ -1,0 +1,193 @@
+/* ==========================
+   LOGIN PAGE
+========================== */
+
+#container{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+#container h2{
+
+    color:var(--primary);
+
+    font-size:2.5rem;
+
+    margin-bottom:30px;
+
+    text-transform:capitalize;
+
+}
+
+/* ==========================
+   FORM
+========================== */
+
+form{
+
+    width:min(400px,100%);
+
+    background:var(--white);
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ==========================
+   INPUTS
+========================== */
+
+form input{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:20px;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    font-size:1rem;
+
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition);
+
+}
+
+form input:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+/* ==========================
+   LOGIN BUTTON
+========================== */
+
+#loginButton{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:var(--radius);
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    font-size:1rem;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:
+        background-color var(--transition),
+        transform var(--transition);
+
+}
+
+#loginButton:hover{
+
+    background:var(--primary-hover);
+
+}
+
+#loginButton:active{
+
+    transform:scale(.97);
+
+}
+
+/* ==========================
+   BACK BUTTON
+========================== */
+
+#container>a{
+
+    margin-top:25px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    background:var(--white);
+
+    padding:12px 18px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    transition:
+        background-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
+
+}
+
+#container>a:hover{
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    transform:translateY(-2px);
+
+}
+
+#container>a p{
+
+    margin:0;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:500px){
+
+    #container h2{
+
+        font-size:2rem;
+
+    }
+
+    form{
+
+        padding:25px 20px;
+
+    }
+
+}

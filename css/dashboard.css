@@ -1,0 +1,293 @@
+/* ==========================
+   DASHBOARD PAGE
+========================== */
+
+/* ---------- HEADER ---------- */
+
+header{
+    background:var(--white);
+
+    box-shadow:var(--shadow);
+
+    padding:20px 40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:40px;
+}
+
+header h2{
+
+    color:var(--primary);
+
+    font-size:2rem;
+
+    text-transform:capitalize;
+
+}
+
+/* ---------- HEADER BUTTONS ---------- */
+
+header div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+header a,
+header button{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    text-decoration:none;
+
+    border:none;
+
+    border-radius:var(--radius);
+
+    padding:12px 18px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:
+        background-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
+
+}
+
+/* Home Button */
+
+header a{
+
+    background:var(--primary);
+
+    color:var(--white);
+
+}
+
+header a:hover{
+
+    background:var(--primary-hover);
+
+}
+
+/* Logout Button */
+
+header button{
+
+    background:#ef4444;
+
+    color:white;
+
+}
+
+header button:hover{
+
+    background:#dc2626;
+
+}
+
+header button:active{
+
+    transform:scale(.97);
+
+}
+
+/* ---------- MAIN ---------- */
+
+main{
+
+    width:min(1200px,95%);
+
+    margin:auto;
+
+}
+
+main h1{
+
+    text-align:center;
+
+    color:var(--text);
+
+    margin-bottom:35px;
+
+    font-size:2.2rem;
+
+}
+
+/* ---------- USERS ---------- */
+
+#container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+
+    gap:20px;
+
+}
+
+/* هر کارت کاربر */
+
+.card{
+
+    background:var(--white);
+
+    border-radius:15px;
+
+    padding:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+/* Avatar */
+
+.card h3{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+    font-size:1.4rem;
+
+}
+
+/* User Information */
+
+.card p{
+
+    margin:10px 0;
+
+    color:var(--text-light);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    line-height:1.5;
+
+}
+
+.card p i{
+
+    color:var(--primary);
+
+}
+
+/* ---------- LOADER ---------- */
+
+#loader{
+
+    width:60px;
+
+    height:60px;
+
+    border:6px solid #ddd;
+
+    border-top-color:var(--primary);
+
+    border-radius:50%;
+
+    animation:spin .8s linear infinite;
+
+    margin:80px auto;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:768px){
+
+    header{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        padding:20px;
+
+    }
+
+    header div{
+
+        width:100%;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    main h1{
+
+        font-size:1.8rem;
+
+    }
+
+    .card{
+
+        padding:18px;
+
+    }
+
+}
